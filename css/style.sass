@@ -1,6 +1,30 @@
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) 
+  // For Google Chrome
+  ::-webkit-scrollbar 
+      width:  $size;
+      height: $size;
+  
+
+  ::-webkit-scrollbar-thumb 
+      background: $foreground-color;
+  
+
+  ::-webkit-scrollbar-track 
+      background: $background-color;
+  
+  // For Internet Explorer
+  body 
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  
+
+
 @import url('https://fonts.googleapis.com/css?family=Baloo|Barrio|Rancho')
 
 /* --------------General settings---------------- */
+
+@include scrollbars(5px, slategray)
+
 body
   background-color: #f2f2f2
 

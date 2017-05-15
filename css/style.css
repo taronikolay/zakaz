@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo|Barrio|Rancho");
 /* --------------General settings---------------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: slategray;
+}
+
+::-webkit-scrollbar-track {
+  background: #b8c0c8;
+}
+
+body {
+  scrollbar-face-color: slategray;
+  scrollbar-track-color: #b8c0c8;
+}
+
 body {
   background-color: #f2f2f2;
 }
