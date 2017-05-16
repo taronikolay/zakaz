@@ -81,6 +81,7 @@ ul.main_nav li {
   width: 100%;
   height: 550px;
   text-align: center;
+  text-shadow: black 0 0 4px;
   background-image: url("../image/random.jpg");
   background-size: cover;
   background-position: center;
