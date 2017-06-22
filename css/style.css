@@ -178,6 +178,7 @@ body {
 }
 
 .info_block:last-child {
+	height: 145px;
 	padding-top: 10px;
 }
 
