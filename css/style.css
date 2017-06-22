@@ -138,7 +138,7 @@ body {
 }
 
 .skills {
-	height: 720px;
+	height: auto;
 	background: white;
 	padding: 0px 175px 0px 175px;
 	text-align: center;
@@ -223,7 +223,7 @@ body {
 }
 
 .meeting {
-	height: 550px;
+	height: auto;
 	background: #1a1a1a;
 	padding: 0px 175px 0px 175px;
 	text-align: center;	
