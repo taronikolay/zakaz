@@ -119,3 +119,15 @@ document.addEventListener("DOMContentLoaded", () => {
     setSliderPosition();
   });
 });
+
+
+function copyCardNumber() {
+  const cardNumber = "5559493719696156"; // Номер карты
+  navigator.clipboard.writeText(cardNumber)
+    .then(() => {
+      alert("Номер карты скопирован в буфер обмена!");
+    })
+    .catch(() => {
+      alert("Не удалось скопировать номер карты.");
+    });
+}

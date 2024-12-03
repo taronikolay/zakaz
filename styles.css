@@ -20,8 +20,12 @@ body {
   }
   
   header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #8b8000;
+    text-align: center;
+    letter-spacing: 1px;
   }
   
   header p {
@@ -29,27 +33,85 @@ body {
     color: #ccc;
   }
 
-  .alert {
-    margin: 20px auto;
-    padding: 15px;
-    background-color: #1a1a1a; /* Яркий красный фон для привлечения внимания */
-    color: #fff; /* Белый текст */
+/* Исправление для блока .alert */
+.alert {
+    display: block; /* Изменяем на block, чтобы избавиться от лишнего flex */
+    position: relative; /* Устанавливаем позиционирование для контроля дочерних элементов */
+    text-align: center; /* Центрируем текст */
+    padding: 20px; /* Добавляем дополнительное пространство */
+    background-color: #1a1a1a; /* Красный фон */
+    color: #fff;
     border-radius: 10px; /* Закругленные углы */
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto; /* Центрирование по горизонтали */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для акцента */
   }
   
+  /* Текст внутри .alert */
   .alert p {
-    margin: 0;
+    text-align: center;
+    margin: 0 0 10px; /* Отступ снизу для кнопки */
     line-height: 1.5;
+    font-size: 1rem;
+  }
+  
+  /* Контейнер для кнопки */
+  .copy-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Кнопка копирования */
+  .copy-btn {
+    width: 15%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px; /* Добавляем отступы */
+    font-size: 0.9rem;
+    white-space: nowrap; /* Убираем перенос текста */
+    font-weight: bold;
+    color: #fff;
+    background-color: #8b8000; /* Золотой фон */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .copy-btn:active {
+    background-color: #7a6600; /* Темный золотой при нажатии */
+  }
+
+  /* Адаптация для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .copy-btn {
+      width: calc(100% - 40px); /* Кнопка растягивается до ширины родителя с отступами */
+      padding: 10px; /* Уменьшаем внутренние отступы */
+      font-size: 0.8rem; /* Небольшое уменьшение текста */
+    }
+  
+    .copy-container {
+      padding: 10px; /* Дополнительное пространство для контейнера */
+    }
   }
   
   .alert p br {
     content: ""; /* Контроль отступов между строками */
   }
-  
+
+
   /* Карусель */
   .carousel {
     position: relative;
@@ -105,7 +167,6 @@ body {
   
   button:hover {
     background-color: #8b8000;
-    color: #000;
     transform: translateY(-50%) scale(1.1);
   }
 
@@ -164,6 +225,58 @@ body {
     }
   }
   
+  /* Стиль для раздела требований */
+.requirements {
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Темный фон */
+    border: 1px solid #8b8000; /* Золотая рамка */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Тень */
+  }
+  
+  .requirements h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #8b8000; /* Золотистый текст */
+    margin-bottom: 20px;
+  }
+  
+  .requirements-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .requirements-content ol {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .requirements-content ol li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #2a2a2a; /* Темно-серый фон */
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Легкая тень */
+  }
+  
+  .requirements-content ol li strong {
+    color: #8b8000; /* Золотистый цвет для акцента */
+  }
+  
+  .requirements-content p:last-child {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+  }
+
   /* Почему выбирают меня */
   .why-choose-me {
     margin: 40px 20px;
@@ -281,4 +394,3 @@ body {
     color: rgba(255, 255, 255, 0.7);
     border-top: 1px solid #444;
   }
-  
