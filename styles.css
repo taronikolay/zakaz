@@ -1,0 +1,284 @@
+/* Общий стиль */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000, #333);
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #8b8000; /* Золотой */
+    margin-bottom: 20px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+
+  .alert {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #1a1a1a; /* Яркий красный фон для привлечения внимания */
+    color: #fff; /* Белый текст */
+    border-radius: 10px; /* Закругленные углы */
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .alert p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .alert p br {
+    content: ""; /* Контроль отступов между строками */
+  }
+  
+  /* Карусель */
+  .carousel {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease-in-out;
+    cursor: grab; /* Указатель для перетаскивания */
+  }
+  
+  .carousel-container:active {
+    cursor: grabbing; /* Указатель при зажатии */
+  }
+
+  .carousel-item {
+    flex: 0 0 300px; /* Дефолтная ширина для десктопа */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    border: 1px solid #8b8000; /* Золотая рамка */
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .carousel-item:hover {
+    transform: scale(1.05);
+    background-color: #2a2a2a;
+  }
+  
+  /* Кнопки карусели */
+  button {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #8b8000;
+    border: none;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #8b8000;
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  /* Стили для кнопок WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #25D366; /* Зеленый цвет WhatsApp */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #1ebf58; /* Более темный зеленый при наведении */
+    transform: scale(1.05); /* Легкое увеличение */
+  }
+  
+  /* Стили для кнопок Telegram */
+  .telegram-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #0088CC; /* Голубой цвет Telegram */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .telegram-btn:hover {
+    background-color: #007ab8; /* Более темный голубой при наведении */
+    transform: scale(1.05); /* Легкое увеличение */
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  /* Мобильная адаптация */
+  @media screen and (max-width: 768px) {
+    .carousel-item {
+      flex: 0 0 100%; /* Полная ширина на мобильных устройствах */
+    }
+  }
+  
+  /* Почему выбирают меня */
+  .why-choose-me {
+    margin: 40px 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #8b8000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .why-choose-me ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .why-choose-me li {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .why-choose-me li:hover {
+    transform: scale(1.05);
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Общий стиль секции социальных сетей */
+.social-media {
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a; /* Темный фон */
+    border: 1px solid #8b8000; /* Золотая рамка */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .social-media h2 {
+    font-size: 1.8rem;
+    color: #8b8000; /* Золотой текст */
+    margin-bottom: 20px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Стили кнопок для каждого соцсети */
+  .tiktok {
+    background-color: #000000; /* Черный фон TikTok */
+  }
+  
+  .tiktok:hover {
+    background-color: #ff0050; /* Красный при наведении */
+  }
+  
+  .youtube {
+    background-color: #FF0000; /* Красный фон YouTube */
+  }
+  
+  .youtube:hover {
+    background-color: #cc0000; /* Темно-красный при наведении */
+  }
+  
+  .vk {
+    background-color: #0077FF; /* Синий фон ВКонтакте */
+  }
+  
+  .vk:hover {
+    background-color: #005BB5; /* Темно-синий при наведении */
+  }
+  
+  .odnoklassniki {
+    background-color: #EE8208; /* Оранжевый фон Одноклассников */
+  }
+  
+  .odnoklassniki:hover {
+    background-color: #d96f06; /* Темно-оранжевый при наведении */
+  }
+  
+  /* Адаптация для мобильных устройств */
+  @media screen and (max-width: 768px) {
+    .social-btn {
+      width: 100%; /* Растягиваем кнопки на всю ширину */
+    }
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid #444;
+  }
+  
