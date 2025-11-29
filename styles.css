@@ -209,6 +209,26 @@ body {
     background-color: #007ab8; /* Более темный голубой при наведении */
     transform: scale(1.05); /* Легкое увеличение */
   }
+
+ /* Стили для кнопок Max */
+  .max-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #7180b9; /* Голубой цвет Max */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .max-btn:hover {
+    background-color: #3423a6; /* Более темный голубой при наведении */
+    transform: scale(1.05); /* Легкое увеличение */
+  }
   
   .prev {
     left: 10px;
@@ -393,4 +413,5 @@ body {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
     border-top: 1px solid #444;
+
   }
